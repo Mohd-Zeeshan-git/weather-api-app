@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================= */
+/* Base Reset */
+/* ============================= */
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: black;
+}
+
+/* ============================= */
+/* Glass UI System */
+/* ============================= */
+
+.glass {
+  @apply bg-white/10 backdrop-blur-2xl rounded-3xl border border-white/20 shadow-2xl;
+}
+
+/* ============================= */
+/* Cinematic Background */
+/* ============================= */
+
+.cinematic-bg {
+  background: radial-gradient(
+    circle at center,
+    #1e3a8a 0%,
+    #000 70%
+  );
+}
+
+/* ============================= */
+/* Lightning Flash Effect */
+/* ============================= */
+
+.flash {
+  animation: flash 0.2s ease-in-out;
+}
+
+@keyframes flash {
+  0% { background: white; }
+  100% { background: transparent; }
+}
+
+/* ============================= */
+/* Rain Animation (Optional CSS Mode) */
+/* ============================= */
+
+@keyframes rain {
+  0% { transform: translateY(-100vh); }
+  100% { transform: translateY(100vh); }
+}
+
+.animate-rain {
+  animation: rain 0.7s linear infinite;
+}
